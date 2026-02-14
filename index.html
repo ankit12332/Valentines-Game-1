@@ -707,13 +707,13 @@
   }
 
   function buildCountdown(){
-    var target = new Date('2026-11-04T00:00:00');
+    var target = new Date('2025-02-11T00:00:00');
     var now = new Date();
     var diff = target - now;
     var container = document.getElementById('countdown-boxes');
     var label = document.getElementById('countdown-label');
 
-    label.textContent = diff > 0 ? 'Counting Down to Our Day' : 'Loving You For';
+    label.textContent = diff > 0 ? 'Counting Down to Our Anniversary' : 'Together For';
 
     var t = calcTime(diff);
     makeBox(t.days, 'Days', container);
@@ -723,7 +723,7 @@
 
     setInterval(function(){
       var now2 = new Date();
-      var diff2 = target - now2;
+      var diff2 = new Date('2025-02-11T00:00:00') - now2;
       var t2 = calcTime(diff2);
       var nums = container.querySelectorAll('.countdown-num');
       if(nums[0]) nums[0].textContent = t2.days;
